@@ -21,7 +21,7 @@ export default function Home() {
             />
           </div>
 
-          <button>Gerar link</button>
+          <button className="button-home">Gerar link</button>
         </div>
       </div>
     </div>
