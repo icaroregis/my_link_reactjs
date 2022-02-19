@@ -5,11 +5,9 @@ import Links from '../pages/Links/Links';
 
 export default function RoutesApp() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/links" element={<Links />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/links" element={<Links />} />
+    </Routes>
   );
 }
