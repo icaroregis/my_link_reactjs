@@ -1,7 +1,9 @@
+import RoutesApp from './routes/RoutesApp';
+
 export default function App() {
   return (
     <div className="app">
-      <div>ola mundo</div>
+      <RoutesApp />
     </div>
   );
 }
