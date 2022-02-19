@@ -133,3 +133,15 @@ button {
 body {
   background-color: #132742;
 }
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
