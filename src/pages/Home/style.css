@@ -5,10 +5,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .image-home {
-  width: 30%;
+  width: 23%;
   margin-bottom: 0.6rem;
 }
 

@@ -1,10 +1,22 @@
 import React from 'react';
+import { FiX, FiClipboard } from 'react-icons/fi';
 import './style.css';
 
-export default function Menu() {
+export default function ModalLinkItem() {
   return (
-    <div>
-      <div>modal</div>
+    <div className="modal-container">
+      <div className="modal-header">
+        <h2 className="title-modal">Link encurtado</h2>
+        <button>
+          <FiX size={28} color="#000" />
+        </button>
+      </div>
+
+      <span>https://www.google.com.br</span>
+      <button className="modal-link">
+        https://bit.ly/12900
+        <FiClipboard size={20} color="#fff" />
+      </button>
     </div>
   );
 }

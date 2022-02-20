@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiLink } from 'react-icons/fi';
 import Logo from '../../assets/Logo.png';
 import Menu from '../../components/Menu/Menu';
+import ModalLinkItem from '../../components/ModalLinkItem/ModalLinkItem';
 import './style.css';
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
         </div>
 
         <Menu />
+        <ModalLinkItem />
       </div>
     </div>
   );
