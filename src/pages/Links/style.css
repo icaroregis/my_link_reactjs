@@ -1,4 +1,80 @@
-.LinksDiv {
-  color: red;
+.links-container {
+  max-width: 1120px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-links {
+  font-weight: 700;
   font-size: 3rem;
+  margin-left: 1.5rem;
+  color: #fff;
+}
+
+.links-items {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.links-items:last-child {
+  margin-bottom: 18px;
+}
+
+.link {
+  border: none;
+  width: 100%;
+  min-width: 80%;
+  border-radius: 4px;
+  height: 46px;
+  background-color: rgb(255, 255, 255, 0.15);
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-items {
+  margin-right: 14px;
+}
+
+.link-delete {
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 738px) {
+  .links-container {
+    width: 90%;
+    padding-left: 1rem;
+  }
+
+  .links-items {
+    width: 100%;
+  }
+
+  .link {
+    width: 100%;
+  }
+
+  .title-links {
+    font-size: 2rem;
+  }
 }
