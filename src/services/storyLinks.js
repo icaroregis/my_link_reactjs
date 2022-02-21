@@ -17,5 +17,13 @@ export async function saveLink(key, newLink) {
 
   linksStored.push(newLink);
   await localStorage.setItem(key, JSON.stringify(linksStored));
-  console.log('link slavo com sucesso');
+}
+
+export function deleteLink(links, id) {
+  let myLinks = links.filter((item) => {
+    return item.id !== id;
+  });
+
+  localStorage.setItem('@encurtaLink', JSON.stringify(myLinks));
+  return myLinks;
 }
