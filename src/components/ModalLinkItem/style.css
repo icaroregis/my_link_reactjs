@@ -8,6 +8,16 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  animation: slideY 1.5s;
+}
+
+@keyframes slideY {
+  from {
+    transform: (100px);
+  }
+  to {
+    transform: (0px);
+  }
 }
 
 .modal-header {
@@ -39,4 +49,16 @@
   padding: 0 14px;
   border: none;
   height: 38px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.span-modal {
+  font-weight: 800;
+}
+
+@media (max-width: 790px) {
+  .modal-container {
+    width: 90%;
+  }
 }

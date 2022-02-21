@@ -3,14 +3,24 @@ import { FiLink } from 'react-icons/fi';
 import Logo from '../../assets/Logo.png';
 import Menu from '../../components/Menu/Menu';
 import ModalLinkItem from '../../components/ModalLinkItem/ModalLinkItem';
+import api from '../../services/api';
 import './style.css';
 
 export default function Home() {
   const [link, setLink] = useState('');
+  const [activeModal, setActiveModal] = useState(false);
+  const [data, setData] = useState({});
 
-  function handleShortLink(e) {
-    e.preventDefault();
-    alert(link);
+  async function handleShortLink() {
+    try {
+      const response = await api.post('shorten', { long_url: link });
+      setData(response.data);
+      setActiveModal(true);
+      setLink('');
+    } catch {
+      alert('Oops parece que algo deu errado!!!');
+      setLink('');
+    }
   }
 
   return (
@@ -19,7 +29,6 @@ export default function Home() {
         <img className="image-home" src={Logo} alt="Logo Link" />
         <h1 className="title-home">EncurtaLinks</h1>
         <span className="span-home">Cole seu link para encurtar 👇</span>
-
         <div className="area-input">
           <div className="input-home">
             <FiLink className="icon-home" size={24} color="#fff" />
@@ -32,13 +41,12 @@ export default function Home() {
             />
           </div>
 
-          <button onClick={(e) => handleShortLink(e)} className="button-home">
+          <button onClick={handleShortLink} className="button-home">
             Gerar link
           </button>
         </div>
-
         <Menu />
-        <ModalLinkItem />
+        {activeModal && <ModalLinkItem setActiveModal={setActiveModal} />}
       </div>
     </div>
   );
