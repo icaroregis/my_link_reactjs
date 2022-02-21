@@ -8,13 +8,18 @@ export default function Menu() {
   return (
     <div className="menu">
       <a
+        target="_blank"
         className="social"
         href="https://www.linkedin.com/in/icaroregisalmeida/"
       >
         <AiFillLinkedin size={24} color="#fff" />
       </a>
 
-      <a className="social" href="https://github.com/icaroregis">
+      <a
+        target="_blank"
+        className="social"
+        href="https://github.com/icaroregis"
+      >
         <GoMarkGithub size={24} color="#fff" />
       </a>
 
