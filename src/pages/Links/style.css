@@ -60,6 +60,10 @@
   background-color: transparent;
 }
 
+.Spacing {
+  margin-bottom: 20rem;
+}
+
 @media (max-width: 738px) {
   .links-container {
     width: 90%;

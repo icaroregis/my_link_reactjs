@@ -3,9 +3,10 @@ import { FiX, FiClipboard } from 'react-icons/fi';
 import { toast, ToastContainer } from 'react-toastify';
 import './style.css';
 
-export default function ModalLinkItem({ setActiveModal, data }) {
+export default function ModalLinkItem({ setActiveModal, data, setShowModal }) {
   function closeModal() {
     setActiveModal(false);
+    setShowModal(false);
   }
 
   async function copyLink() {

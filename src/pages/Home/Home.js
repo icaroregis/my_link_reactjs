@@ -4,6 +4,7 @@ import Logo from '../../assets/Logo.png';
 import Menu from '../../components/Menu/Menu';
 import ModalLinkItem from '../../components/ModalLinkItem/ModalLinkItem';
 import api from '../../services/api';
+import { saveLink } from '../../services/storyLinks';
 import './style.css';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       const response = await api.post('shorten', { long_url: link });
       setData(response.data);
       setActiveModal(true);
+      saveLink('@encurtaLink', response.data);
       setLink('');
     } catch {
       alert('Oops parece que algo deu errado!!!');
