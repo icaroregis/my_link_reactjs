@@ -46,7 +46,9 @@ export default function Home() {
           </button>
         </div>
         <Menu />
-        {activeModal && <ModalLinkItem setActiveModal={setActiveModal} />}
+        {activeModal && (
+          <ModalLinkItem setActiveModal={setActiveModal} data={data} />
+        )}
       </div>
     </div>
   );
